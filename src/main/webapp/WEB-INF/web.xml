@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <!-- INICIO ESTUDIANTE CONTROLLER -->
+    <servlet>
+        <servlet-name>UsuarioController</servlet-name>
+        <servlet-class>controllers.UsuarioController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MateriaController</servlet-name>
+        <servlet-class>controllers.MateriaController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PerfilController</servlet-name>
+        <servlet-class>controllers.PerfilController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/Usuario</url-pattern>
+    </servlet-mapping>
+    <!-- FIN ESTUDIANTE CONTROLLER -->
+    <!-- INICIO LOGIN CONTROLLER -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controllers.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <!-- FIN LOGIN CONTROLLER -->
+    <servlet-mapping>
+        <servlet-name>MateriaController</servlet-name>
+        <url-pattern>/Materia</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PerfilController</servlet-name>
+        <url-pattern>/Perfil</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
